@@ -9,6 +9,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private Collider coll;
 
+    /// <summary>
+    /// The object to reference when moving "forward," "left," "backward," or "right."
+    /// </summary>
+    [SerializeField]
+    private GameObject orienter;
+
     public float maxVelocity = 5;
     public float accelSpeed = 1;
 
@@ -20,19 +26,19 @@ public class PlayerMovement : MonoBehaviour
         //If the WASD keys are held, add the corresponding direction to the move direction.
         if (Input.GetKey(KeyCode.W))
         {
-            moveDir += Vector3.forward;
+            moveDir += orienter.transform.forward;
         }
         if (Input.GetKey(KeyCode.A))
         {
-            moveDir += Vector3.left;
+            moveDir += -orienter.transform.right;
         }
         if (Input.GetKey(KeyCode.S))
         {
-            moveDir += Vector3.back;
+            moveDir += -orienter.transform.forward;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            moveDir += Vector3.right;
+            moveDir += orienter.transform.right;
         }
 
         //Now apply that move direction to actual movement.
