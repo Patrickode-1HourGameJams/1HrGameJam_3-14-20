@@ -333,7 +333,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690239233}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.25, y: 0.2, z: 0.45}
+  m_LocalPosition: {x: 0.173, y: 0.2, z: 0.45}
   m_LocalScale: {x: 0.25, y: 0.2, z: 0.25}
   m_Children: []
   m_Father: {fileID: 1394463346}
@@ -504,7 +504,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800545943}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.25, y: 0.2, z: 0.45}
+  m_LocalPosition: {x: -0.185, y: 0.2, z: 0.45}
   m_LocalScale: {x: 0.25, y: 0.2, z: 0.25}
   m_Children: []
   m_Father: {fileID: 1394463346}
@@ -569,7 +569,7 @@ GameObject:
   - component: {fileID: 962474536}
   - component: {fileID: 962474535}
   m_Layer: 0
-  m_Name: Eyebrow
+  m_Name: Eyebrow (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -583,11 +583,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 962474532}
   m_LocalRotation: {x: 0, y: 0, z: 0.42261827, w: 0.9063079}
-  m_LocalPosition: {x: 0.33, y: 0.27, z: 0.45}
+  m_LocalPosition: {x: 0.253, y: 0.27, z: 0.45}
   m_LocalScale: {x: 0.1, y: 0.24, z: 0.25}
   m_Children: []
   m_Father: {fileID: 1394463346}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 50}
 --- !u!23 &962474535
 MeshRenderer:
@@ -1090,8 +1090,8 @@ Transform:
   m_Children:
   - {fileID: 800545944}
   - {fileID: 690239234}
-  - {fileID: 962474533}
   - {fileID: 2050011017}
+  - {fileID: 962474533}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -1492,7 +1492,7 @@ GameObject:
   - component: {fileID: 2050011020}
   - component: {fileID: 2050011019}
   m_Layer: 0
-  m_Name: Eyebrow (1)
+  m_Name: Eyebrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1506,11 +1506,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2050011016}
   m_LocalRotation: {x: 0, y: 0, z: -0.42261827, w: 0.9063079}
-  m_LocalPosition: {x: -0.33, y: 0.27, z: 0.45}
+  m_LocalPosition: {x: -0.265, y: 0.27, z: 0.45}
   m_LocalScale: {x: 0.1, y: 0.24, z: 0.25}
   m_Children: []
   m_Father: {fileID: 1394463346}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -50}
 --- !u!23 &2050011019
 MeshRenderer:
