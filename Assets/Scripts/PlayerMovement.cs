@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float maxVelocity = 5;
     public float accelSpeed = 1;
+    public float jumpPower = 5;
 
     void Update()
     {
@@ -41,6 +42,11 @@ public class PlayerMovement : MonoBehaviour
             moveDir += orienter.transform.right;
         }
 
+        if (Input.GetKey(KeyCode.Space) && IsGrounded())
+        {
+            ApplyJumpInput();
+        }
+
         //Now apply that move direction to actual movement.
         if (moveDir != Vector3.zero)
         {
@@ -59,5 +65,19 @@ public class PlayerMovement : MonoBehaviour
         Vector3 velSubY = new Vector3(rb.velocity.x, 0, rb.velocity.z);
         Vector3 newVel = Vector3.ClampMagnitude(velSubY + forceDir * accelSpeed, maxVelocity);
         rb.velocity = new Vector3(newVel.x, rb.velocity.y, newVel.z);
+    }
+
+    /// <summary>
+    /// Makes the player jump.
+    /// </summary>
+    private void ApplyJumpInput()
+    {
+        rb.velocity = new Vector3(rb.velocity.x, jumpPower, rb.velocity.z);
+    }
+
+    private bool IsGrounded()
+    {
+        //Thanks to http://answers.unity.com/answers/196395/view.html for this!
+        return Physics.Raycast(transform.position, -Vector3.up, coll.bounds.extents.y + 0.05f);
     }
 }
